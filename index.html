@@ -1,19 +1,39 @@
 <!doctype html>
 <html>
   <head>
-    <title>Hola pagina web</title>
+    <title>lucia te amo</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="caja">
-    <h1> hola jeje</h1>
-    <p> la gran bestia pop </p>
-    <button class = "bt1"> presionar para un beso</button>
-  </div>
 
-  <div class="info">
-    <h2> que onda esto wacho</h2>
-    <button class = "bt2"> hola apretame </button>
-  </div>
+  <body>
+    <div class="container">
+      <img src="imagen.png" class="imagen">
+      <h1 class="titulo">Hola lucia</h1>
+      <h2 class="pregunta">¿Te queres casar conmigo?</h2>
+
+      <div class="botones">
+        <button class="btn1">SI</button>
+        <button class="btn2">NO</button>
+      </div>
+    </div>
+  <script>
+  const botonNo = document.querySelector(".btn2");
+  const container = document.querySelector(".container");
+
+  botonNo.addEventListener("mouseover", () => {
+    botonNo.style.position = "absolute";
+
+    const maxX = container.clientWidth - botonNo.offsetWidth;
+    const maxY = container.clientHeight - botonNo.offsetHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    botonNo.style.left = x + "px";
+    botonNo.style.top = y + "px";
+  });
+</script>
+ 
+    
   </body>
 </html>
